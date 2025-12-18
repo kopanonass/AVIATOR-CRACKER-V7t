@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVIATOR CRACKER +V7</title>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-straight/css/uicons-solid-straight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcome-page" class="page active">
+        <h1 class="welcome-title">AVIATOR CRACKER +V7</h1>
+        <p class="welcome-subtitle">Professional prediction tool with advanced algorithms</p>
+        <button id="launch-app-btn" class="welcome-button">START NOW</button>
+    </div>
+
+    <!-- Registration Page -->
+    <div id="registration-page" class="page">
+        <div class="form-container">
+            <h2 class="form-title">Create Account</h2>
+            <form id="registration-form">
+                <input type="text" id="name" class="form-input" placeholder="Full Name" required>
+                <input type="email" id="email" class="form-input" placeholder="Email Address" required>
+                <input type="tel" id="cell" class="form-input" placeholder="Phone Number" required>
+                <button type="submit" class="form-button">CONTINUE → $130</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Page -->
+    <div id="payment-page" class="page">
+        <div class="payment-container">
+            <h2 class="form-title">Complete Payment</h2>
+            <div class="payment-card">
+                <div style="color: rgba(255,255,255,0.7);">Total Amount</div>
+                <div class="payment-amount">₦65000</div>
+                <div class="payment-description">
+                    One-time payment for Aviator Cracker +V7 lifetime license. Includes all features and future updates.
+                </div>
+                
+                <div class="payment-methods">
+                    <div class="payment-method" data-method="card">
+                        <div class="method-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="method-info">
+                            <div class="method-name">Card Payment</div>
+                            <div class="method-desc">Visa, Mastercard, Verve</div>
+                        </div>
+                        <div style="color: #ff6b6b;">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-method" data-method="bank">
+                        <div class="method-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="method-info">
+                            <div class="method-name">Bank Transfer</div>
+                            <div class="method-desc">Direct bank transfer</div>
+                        </div>
+                        <div style="color: #ff6b6b;">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-method" data-method="ussd">
+                        <div class="method-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="method-info">
+                            <div class="method-name">USSD</div>
+                            <div class="method-desc">Quick USSD payment</div>
+                        </div>
+                        <div style="color: #ff6b6b;">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="process-payment-btn" class="platform-button" disabled>PAY WITH PAYSTACK</button>
+            <button id="back-to-register-btn" class="action-btn" style="margin-top: 15px; background: transparent;">Back to Registration</button>
+        </div>
+    </div>
+
+    <!-- Email Confirmation Page -->
+    <div id="email-page" class="page">
+        <div class="email-container">
+            <div class="email-card">
+                <div class="email-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <h2 class="email-title">Payment Successful!</h2>
+                <div class="email-message">
+                    Your payment has been processed successfully. A confirmation email has been sent to your email address with your license key.
+                </div>
+                
+                <div class="user-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Full Name:</span>
+                        <span class="detail-value" id="user-name-display">John Doe</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Email Address:</span>
+                        <span class="detail-value" id="user-email-display">john@example.com</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Phone Number:</span>
+                        <span class="detail-value" id="user-phone-display">+1 234 567 8900</span>
+                    </div>
+                </div>
+                
+                <div class="license-key-box">
+                    <div style="color: rgba(255,255,255,0.7); margin-bottom: 10px;">Your License Key:</div>
+                    <div class="license-key" id="generated-license">AVIATOR-XXXX-XXXX-XXXX</div>
+                    <div class="license-note">
+                        This license key has been sent to your email. Keep it safe for future use.
+                    </div>
+                </div>
+                
+                <button id="continue-to-license-btn" class="platform-button" style="margin-top: 20px;">CONTINUE TO ACTIVATION</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- License Page -->
+    <div id="license-page" class="page">
+        <div class="license-container">
+            <h2 class="form-title">Activate License</h2>
+            <p style="margin-bottom: 20px; color: rgba(255,255,255,0.7);">Enter your license key to activate the tool</p>
+            <div class="license-key-box" style="margin-bottom: 25px;">
+                <div style="color: rgba(255,255,255,0.7); margin-bottom: 10px;">Your License Key:</div>
+                <div class="license-key" id="prefilled-license">AVIATOR-XXXX-XXXX-XXXX</div>
+            </div>
+            <form id="license-form">
+                <input type="text" id="license" class="form-input" placeholder="Enter your license key" required>
+                <button type="submit" class="form-button">ACTIVATE LICENSE</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Platform Selection -->
+    <div id="platform-page" class="page">
+        <h2 class="platform-title">Select Platform</h2>
+        <p class="platform-subtitle">Choose your gaming platform</p>
+        <div class="platform-grid" id="platformGrid">
+            <!-- Platforms will be added here -->
+        </div>
+        <button id="activate-platform" class="platform-button" disabled>CONTINUE →</button>
+    </div>
+
+    <!-- Strategy Selection Page -->
+    <div id="strategy-select-page" class="page" style="background: rgba(0,0,0,0.9);">
+        <div class="clean-section">
+            <h2 class="clean-title">Select Strategy</h2>
+            <p class="clean-subtitle">Choose your preferred strategy type</p>
+            
+            <div class="strategy-grid" id="strategyGrid">
+                <!-- Strategies will be added here -->
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <button id="apply-strategy-btn" class="clean-button" style="min-width: 200px;" disabled>APPLY STRATEGY</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aviator Cracker -->
+    <div id="aviator-page" class="page">
+        <div class="aviator-header">
+            <div>
+                <div class="aviator-title">AVIATOR CRACKER +V7</div>
+                <div class="aviator-info" id="selectedPlatformInfo">ACTIVE</div>
+            </div>
+            <div id="statusBadge" class="status-indicator">ACTIVE</div>
+        </div>
+        
+        <div class="aviator-content">
+            <!-- Main Panel -->
+            <div class="main-panel">
+                <div class="panel-title">LIVE ANALYSIS</div>
+                
+                <div class="connection-status">
+                    <div class="connection-dot"></div>
+                    <div style="color: rgba(255,255,255,0.8); font-size: 15px;">CONNECTED</div>
+                </div>
+                
+                <div class="live-data-grid">
+                    <div class="live-data-item">
+                        <div id="currentMultiplier" class="live-data-value">1.00x</div>
+                        <div class="live-data-label">CURRENT MULTIPLIER</div>
+                    </div>
+                    <div class="live-data-item">
+                        <div id="activePlayers" class="live-data-value">0</div>
+                        <div class="live-data-label">ACTIVE PLAYERS</div>
+                    </div>
+                    <div class="live-data-item">
+                        <div id="lastCrash" class="live-data-value">0.00x</div>
+                        <div class="live-data-label">LAST CRASH</div>
+                    </div>
+                </div>
+                
+                <div class="prediction-area">
+                    <div class="prediction-icon">
+                        <i class="fi fi-sr-trading"></i>
+                    </div>
+                    <div id="predictionBlock">
+                        <div style="color: rgba(255,255,255,0.6); margin-bottom: 10px; font-size: 14px; letter-spacing: 1px;">NEXT ROUND PREDICTION</div>
+                        <div id="predRange" class="prediction-value">—</div>
+                        <div class="prediction-accuracy" id="apiSource">ANALYSIS READY</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Side Panel -->
+            <div class="side-panel">
+                <div class="panel-title">SESSION HISTORY</div>
+                <div class="history-container" id="historyContainer">
+                    <!-- History will be added here -->
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <div class="panel-title">ACTIONS</div>
+                    <div class="action-buttons">
+                        <button id="resetBtn" class="action-btn">RESET SESSION</button>
+                        <button id="changeStrategyBtn" class="action-btn">CHANGE STRATEGY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button id="analyzeBtn" class="analyze-button">
+            <div style="font-size: 20px; margin-bottom: 5px;">GET</div>
+            <div style="font-size: 15px; opacity: 0.9;">PREDICTION</div>
+        </button>
+    </div>
+
+    <!-- Processing Overlay -->
+    <div id="processing-overlay" class="processing-overlay">
+        <div class="processing-box">
+            <div class="processing-icon">
+                <i class="fas fa-spinner"></i>
+            </div>
+            <h2 style="margin-bottom: 15px; color: #fff;">Processing Payment</h2>
+            <div style="color: rgba(255,255,255,0.7); margin-bottom: 25px;">
+                Please wait while we process your payment...
+            </div>
+            <div id="processing-status" style="color: #ff6b6b; font-size: 14px;">
+                Connecting to payment gateway...
+            </div>
+        </div>
+    </div>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
